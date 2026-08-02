@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { SectionHeader } from "@/components/shared";
 
 export default function AboutContent() {
   return (
@@ -11,19 +12,17 @@ export default function AboutContent() {
       transition={{ duration: 0.8 }}
       className="max-w-xl"
     >
-      <p className="text-sm font-medium uppercase tracking-[0.35em] text-[var(--forest)]">
-        About REWILD
-      </p>
-
-      <h2 className="mt-4 font-[family:var(--font-cormorant)] text-5xl font-semibold leading-[1.08] text-[var(--forest)] md:text-6xl">
-        A Return to
-        <br />
-        What Matters
-      </h2>
-
-      <div className="mt-8 h-px w-16 bg-[var(--forest)]/30" />
-
-      <div className="mt-8 space-y-6 text-lg leading-9 text-stone-600">
+      <SectionHeader
+        align="left"
+        eyebrow="About REWILD"
+        title={
+          <>
+            A Return to
+            <br />
+            What Matters
+          </>
+        }
+      >
         <p>
           In a world that constantly demands your attention, REWILD is an
           invitation to slow down.
@@ -39,7 +38,7 @@ export default function AboutContent() {
           This isn't about escaping life. It's about returning to it with
           greater clarity, presence and intention.
         </p>
-      </div>
+      </SectionHeader>
     </motion.div>
   );
 }
